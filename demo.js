@@ -56,6 +56,7 @@ function handle_command(command){
 		break;
 		case "clear":
 		clear(splitRes);
+		break;
 		 default:
 		con.log("Wrong input.");
 			break;
@@ -63,6 +64,14 @@ function handle_command(command){
 };
 function hasExpired(data){
 	if (!data.expire){
+	return false;
+	return false;
+	return false;
+	return false;
+	return false;
+	return false;
+	return false;
+	return false;
 	return false;
 	}
 	let time = new Date().getTime() - data.expire;
