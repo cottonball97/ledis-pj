@@ -221,7 +221,7 @@ function del(splitRes){
 		con.log("Key doesn't exist");
 		return;
 	}
-	if(hasExpired(dict[prop]) ) {
+	if(hasExpired(dict[prop]) ) 	{
 		delete dict[prop];
 	}
 		con.log(prop + " is deleted")
@@ -246,6 +246,8 @@ function expire(splitRes) {
 			if (!dict[key].expire  ){
 			dict[key].expire = new Date().getTime() + seconds*1000;
 			con.log(seconds + " seconds");
+			
+				console.log(dict[key].expire);
 			}
 			else{
 				if (new Date().getTime() - dict[key].expire > 0){
@@ -254,6 +256,7 @@ function expire(splitRes) {
 				else {				
 				dict[key].expire = new Date().getTime() + seconds*1000;
 				con.log(seconds + " seconds");
+				console.log(dict[key].expire);
 				}
 			}
 		}
